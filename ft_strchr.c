@@ -8,5 +8,7 @@ char *strchr(const char *str, int c)
     i = 0;
     while (str[i]!= c)
         i++;
+    if (str[i]== c)
+        
     
 }
