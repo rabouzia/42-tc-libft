@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/06 15:59:59 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:58:36 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int ft_isdigit (char c);
 
 int ft_isprint(unsigned char c);
 
-void *ft_memchr(const void *memb, int searchchr, size_t size);
+void *ft_memchr(const void *str, int c, size_t n);
 
 void *memcpy(void *d, const void * s, size_t size);
 

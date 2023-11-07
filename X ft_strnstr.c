@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 14:28:21 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/07 18:41:19 by rabouzia         ###   ########.fr       */
+/*   Created: 2023/11/07 17:05:47 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/07 18:06:08 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
-{
-    void *alloc;
+char *ft_strnstr(const char *str, const char *to_find, size_t n)
+{ 
+    int i;
+    int j;
     
-    alloc = (void *)malloc (count * size);
-    if(!alloc)
-        return(NULL);
-    return (alloc);
+    i = 0;
+    j = 0;
+    if (to_find[j] == '\0')
+        return (str);
+    while(str[i])
+    {
+        while(str[i + j] && to_find[j] == str[i + j])
+            j++;
+        if (to_find[j] == '\0')
+            return (str + i);
+        i++;
+        j = 0;
+    }
+    return (NULL);
 }
