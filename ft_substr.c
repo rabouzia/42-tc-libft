@@ -6,29 +6,40 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:41:55 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/07 20:58:13 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:35:44 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char *empty(void)
 {
-    int n;
+    char *err;
+
+    err = malloc(1);
+    if(!err)
+        return (NULL);
+    err[0] = 0;
+    return (err);
+}
+
+char *ft_substr(const char *s, unsigned int start, size_t len)
+{
+    size_t n;
     char *res;
 
     n = ft_strlen(s);
-    if (start > n)
+    if(!s)
         return (NULL);
-    if (n > start - len)
-        n = start - len;
-    
-    res = (char *) malloc(n);
-
+    if (start > (unsigned int)n)
+        return (empty());
+    if (len > n - start)
+        len = n - start;
+    res = (char *) malloc((len + 1) *sizeof(*s));
     if (!res)
         return NULL;
-    res = ft_strlcpy()
-    return res;
+    ft_strlcpy(res, s + start, len + 1);
+    return (res);
 }
 #include <stdio.h>
 #include <string.h>
@@ -42,5 +53,5 @@ int  main ()
 	printf("'' : %s\n",	ft_substr("bonjour", 6, 0));
 	char stest[100] = "test";
 	memset(stest + 6, 'a', 50); 
-	printf("'' : %s\n",	ft_substr(stest, 10, 1));   
+	printf("'' : %s\n",	ft_substr(stest, 10, 1));  
 }

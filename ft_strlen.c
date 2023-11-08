@@ -6,13 +6,13 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:29:41 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/07 20:49:56 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:55:03 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_strlen(char const *str)
+int     ft_strlen(const char *str)
 {
     int i;
     i = 0;

@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/07 16:58:36 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:35:02 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 char *ft_strchr(const char *str, int c);
 
 char *ft_strrchr(const char *str, int c);
+
+char *ft_substr(const char *s, unsigned int start, size_t len);
 
 int ft_atoi(char *str);
 
@@ -58,7 +60,9 @@ char    *ft_strcpy(char *dest, char *src);
 
 char    *ft_strdup(char *src);
 
-int     ft_strlen(char *str);
+int     ft_strlen(const char *str);
+
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
 
 void    ft_tolower(char c);
 

@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 14:29:16 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/08 17:42:59 by rabouzia         ###   ########.fr       */
+/*   Created: 2023/11/08 14:45:20 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/08 17:33:19 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
-{
-	int		i;
-	int		j;
 
+
+
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+{
+	unsigned int	i;
+	unsigned int	x;
+
+	x = ft_strlen(src);
 	i = 0;
-	j = 0;
-	if (s1 == NULL)
-		return (NULL);
-	while (s1[i])
-		i++;
-	while (s2[j])
+	if (size != 0)
 	{
-		s1[i] = s2[j];
-		j++;
+		while (src [i] != '\0' && i < size - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	s1[i] = '\0';
-	return (s1);
+	return (x);
 }
