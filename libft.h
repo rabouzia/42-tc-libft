@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/08 16:35:02 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:12:53 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,17 @@ void    ft_putnbr(int nb);
 
 void    ft_putstr(char *str);
 
-char    *ft_strcat(char *dest, char *src);
+char    *ft_strcat(char *dest, const char *src);
 
 char    *strchr(const char *str, int c);
 
 int     ft_strcmp(char *s1, char *s2);
 
-char    *ft_strcpy(char *dest, char *src);
+char    *ft_strcpy(char *dest, const char *src);
 
-char    *ft_strdup(char *src);
+char    *ft_strdup(const char *src);
+
+char    *ft_strjoin(char const *s1, char const *s2);
 
 int     ft_strlen(const char *str);
 

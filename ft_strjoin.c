@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:05:24 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/08 17:57:03 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:13:14 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,21 @@ char *ft_strjoin(char const *s1, char const *s2)
         return (ft_strdup(s2));
     if (!s2)
         return (ft_strdup(s1));
-    if (!(res = (char *)malloc(len)*sizeof(char)))
+    if (!(res = (char *)malloc((len)*sizeof(char))))
         return (NULL);
-    ft_strcpy(res, s1);
-    ft_strcat(res, s2);
+    ft_strcat(ft_strcpy(res, s1), s2);
     return (res);
 }
+    #include <stdio.h>
+
+    int main (){
+    printf("\n\n--------STRJOIN------------");
+     printf("\n ft_strjoin : 'Hello World ', 'Salut ca va'\n");
+     char string[50] = "Hello World ";
+	char concat[50] = "Salut ca va";
+	 printf("%s\n", ft_strjoin(string, concat));
+    
+     printf("\n ft_strjoin : 'Hello', ' World, ca va?'\n");
+	char string2[50] = "Hello";
+	 char concat2[50] = " World, ca va?";
+	 printf("%s\n", ft_strjoin(string2, concat2));}
