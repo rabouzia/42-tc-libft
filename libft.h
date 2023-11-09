@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/09 15:12:53 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:03:36 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void *ft_calloc(size_t count, size_t size);
 
 int ft_isalnum(char c);
 
-int ft_isascii (char c);
+int ft_isascii (int c);
 
 int ft_isdigit (char c);
 
@@ -62,7 +62,7 @@ char    *ft_strdup(const char *src);
 
 char    *ft_strjoin(char const *s1, char const *s2);
 
-int     ft_strlen(const char *str);
+int             ft_strlen(const char *str);
 
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
 

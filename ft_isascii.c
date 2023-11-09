@@ -6,13 +6,13 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:38 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/06 14:28:39 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:03:11 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii (char c)
+int ft_isascii (int c)
 {
     if (c >= 0 && c <= 127)
         return 1;

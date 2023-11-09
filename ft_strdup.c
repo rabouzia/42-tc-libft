@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:29:31 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/08 17:45:51 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:00:59 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 char    *ft_strdup(const char *src)
 {
+    (void)src;
     int i;
     char *r;
 
