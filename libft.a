@@ -1,0 +1,839 @@
+!<arch>
+ft_isalpha.c/   0           0     0     644     1125      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:33 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:34 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int     ft_isalpha(char c)
+{
+    if ((c >= '0') && ( c<= '9'))
+        return 1;
+    if ((c >= 'A') && (c <= 'Z'))
+        return 1;
+    if ((c >= 'a') && (c <= 'z'))
+        return 1;
+    else
+        return 0;
+}
+ft_isdigit.c/   0           0     0     644     1022      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:42 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:43 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int     ft_isdigit (char c)
+{
+    if ((c >= '0') && ( c<= '9'))
+        return 1;
+    else
+        return 0;
+}ft_isalnum.c/   0           0     0     644     1110      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:29 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:30 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int ft_isalnum(char c)
+{
+    if (c >= '0' && c <= '9')
+        return 1;
+    if (c >= 'A' && c <= 'Z')
+        return 1;
+    if (c >= 'a' && c <= 'z')
+        return 1;
+    else
+        return 0;
+}
+ft_isascii.c/   0           0     0     644     1012      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:38 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:39 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int ft_isascii (char c)
+{
+    if (c >= 0 && c <= 127)
+        return 1;
+    else
+        return 0;
+}ft_isprint.c/   0           0     0     644     1021      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:47 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:48 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int ft_isprint(unsigned char c)
+{
+    if (c >= 32  && c < 127)
+        return 1;
+    else
+        return 0;
+}
+ft_strlen.c/    0           0     0     644     1024      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:29:41 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/08 15:55:03 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int     ft_strlen(const char *str)
+{
+    int i;
+    i = 0;
+    while (str[i])
+        i++;    
+    return (i);
+}ft_memset.c/    0           0     0     644     1133      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:58 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:59 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void *ft_memset(void *b, int c, size_t len)
+{
+    char *start;
+    
+    if(b == NULL)
+        return (NULL);
+    start = b;
+    while (len)
+    {
+        *start = c;
+        start++;
+        len--;
+    }
+    return (b);
+}
+ft_bzero.c/     0           0     0     644     1052      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:16 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:17 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void bzero(void *s, size_t n)
+{
+    char *zeroed;
+    size_t  i;
+    
+    zeroed = s;
+    i = 0;
+    while(i++ < n)
+        *zeroed++ = 0;
+}ft_memcpy.c/    0           0     0     644     1230      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:53 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:28:54 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void *memcpy(void *d, const void * s, size_t size)
+{
+    unsigned int i;
+    char                *dest;
+    const char           *src;
+
+    if (s == NULL || d == NULL)
+        return (NULL);
+    dest = d;
+    src = s;
+    i = 0;
+    while (i < size)
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    return (d);
+}ft_memmove.c/   0           0     0     644     1238      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/31 17:36:30 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 16:12:49 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void *ft_memmove(void *d, const void *s, size_t size)
+{
+    char    *result;
+    
+    if (s == NULL || d == NULL)
+        return (NULL);
+    if (!(result = (char*) malloc(sizeof(char *)* size)))
+        return (NULL);
+    result = ft_strncpy(result, s, size);
+    d = (d, result, size);
+    free(result);
+    return(result);
+}ft_strlcat.c/   0           0     0     644     1299      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/09 15:35:47 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/09 15:47:27 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	j;
+	size_t	dlen;
+	size_t	slen;
+
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+	{
+		j++;
+	}
+	dlen = j;
+	slen = ft_strlen(src);
+	if (size == 0 || size <= dlen)
+		return (slen + size);
+	while (src [i] != '\0' && i < size - dlen - 1)
+	{
+		dest[j] = src[i];
+		i++;
+		j++;
+	}
+	dest[j] = '\0';
+	return (dlen + slen);
+}
+ft_strlcpy.c/   0           0     0     644     1159      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 14:45:20 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/09 15:47:19 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	x;
+
+	x = ft_strlen(src);
+	i = 0;
+	if (size != 0)
+	{
+		while (src [i] != '\0' && i < size - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (x);
+}
+ft_toupper.c/   0           0     0     644     991       `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:29:48 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:29:49 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+
+void    ft_toupper(char c)
+{
+    if (c >= 'a' && c <= 'z')
+        c -= 32; 
+}
+ft_tolower.c/   0           0     0     644     991       `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:29:37 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 14:29:38 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+
+void    ft_tolower(char c)
+{
+    if (c >= 'A' && c <= 'Z')
+        c += 32; 
+}
+ft_strchr.c/    0           0     0     644     1368      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:27:57 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 15:17:36 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char *ft_strchr(const char *str, int c)
+{
+    char *res;
+    
+    res = (char*)str;
+    while (*res != c)
+    {
+        if(*res == '\0')
+            return (NULL);
+        res++;
+    }
+    return res;
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main () 
+{
+   const char str[] = "https://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = ft_strchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+   
+   return(0);
+}ft_strncmp.c/   0           0     0     644     1492      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 16:00:36 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/06 16:03:42 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int ft_strncmp(char *s1, char *s2, size_t n)
+{
+    int i;
+    i = 0;
+    while (s1[i] && s2[i] && s1[i] == s2[i] && n > 0)
+    {
+        i++;
+        n--;
+    }
+    return (s1[i] - s2[i]);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+   char str1[15];
+   char str2[15];
+   int ret;
+
+   strcpy(str1, "abcdef");
+   strcpy(str2, "ABCDEF");
+
+   ret = strncmp(str1, str2, 4);
+
+   if(ret < 0) {
+      printf("str1 is less than str2");
+   } else if(ret > 0) {
+      printf("str2 is less than str1");
+   } else {
+      printf("str1 is equal to str2");
+   }
+   
+   return(0);
+}ft_memchr.c/    0           0     0     644     1528      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/07 16:22:58 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/07 17:01:39 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int ft_sttrlen(const char *str)
+{
+    int i;
+
+    i = 0;
+    while(str[i] != '\0')
+        i++;
+    return(i);
+}
+
+
+void *ft_memchr(const void *str, int c, size_t n)
+{
+    char *res;
+    
+    res = (char *)str;
+    while(*res != c && n > 0)
+    {
+        if(*res == '\0')
+            return NULL;
+        res++;
+        n--;
+    }
+    return res;
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main () 
+{
+   const char str[] = "https://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = ft_memchr(str, ch, ft_sttrlen(str));
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
+}
+ft_memcmp.c/    0           0     0     644     1545      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/07 16:59:17 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/07 17:05:10 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int memcmp(const void *str1, const void *str2, size_t n)
+{
+    int i;
+    char *s1;
+    char *s2;
+
+    s1 = (char *) str1;
+    s2 = (char *) str2;    
+    i = 0;
+    while(s1[i] == s2[i] && n > 0)
+        i++;
+    return(s1[i] - s2[i]);
+}
+ #include <stdio.h>
+#include <string.h>
+
+int main () {
+   char str1[15];
+   char str2[15];
+   int ret;
+
+   memcpy(str1, "abcdef", 6);
+   memcpy(str2, "ABCDEF", 6);
+
+   ret = memcmp(str1, str2, 5);
+
+   if(ret > 0) {
+      printf("str2 is less than str1");
+   } else if(ret < 0) {
+      printf("str1 is less than str2");
+   } else {
+      printf("str1 is equal to str2");
+   }
+   
+   return(0);
+}
+ft_strnstr.c/   0           0     0     644     1290      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/07 17:05:47 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/07 18:06:08 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char *ft_strnstr(const char *str, const char *to_find, size_t n)
+{ 
+    int i;
+    int j;
+    
+    i = 0;
+    j = 0;
+    if (to_find[j] == '\0')
+        return (str);
+    while(str[i])
+    {
+        while(str[i + j] && to_find[j] == str[i + j])
+            j++;
+        if (to_find[j] == '\0')
+            return (str + i);
+        i++;
+        j = 0;
+    }
+    return (NULL);
+}ft_atoi.c/      0           0     0     644     1237      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:08 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/07 18:48:20 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_atoi(char *str)
+{
+	int	p;
+	int	n;
+
+	n = 0;
+	p = 0;
+	while ((*str >= 9 || *str <= 13) && *str == 32)
+		str++;
+	while (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			p++;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		n *= 10;
+		n += *str - '0';
+		str++;
+	}
+	if (!(p % 2 == 0))
+		return (-n);
+	return (n);
+}
+
+ft_calloc.c/    0           0     0     644     1080      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:21 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/07 18:41:19 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void *ft_calloc(size_t count, size_t size)
+{
+    void *alloc;
+    
+    alloc = (void *)malloc (count * size);
+    if(!alloc)
+        return(NULL);
+    return (alloc);
+}ft_strdup.c/    0           0     0     644     1184      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:29:31 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/08 17:45:51 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include <stdlib.h>
+
+char    *ft_strdup(const char *src)
+{
+    int i;
+    char *r;
+
+    r = (int *) malloc(sizeof(char) * (ft_strlen(src) + 1));
+    if (!r)
+        return NULL;
+    while(src[i])
+    {
+        r[i] = src[i];
+        i++;
+    }
+    r[i] = 0;
+    return r;
+}ft_substr.c/    0           0     0     644     1904      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/07 18:41:55 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/08 16:35:44 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char *empty(void)
+{
+    char *err;
+
+    err = malloc(1);
+    if(!err)
+        return (NULL);
+    err[0] = 0;
+    return (err);
+}
+
+char *ft_substr(const char *s, unsigned int start, size_t len)
+{
+    size_t n;
+    char *res;
+
+    n = ft_strlen(s);
+    if(!s)
+        return (NULL);
+    if (start > (unsigned int)n)
+        return (empty());
+    if (len > n - start)
+        len = n - start;
+    res = (char *) malloc((len + 1) *sizeof(*s));
+    if (!res)
+        return NULL;
+    ft_strlcpy(res, s + start, len + 1);
+    return (res);
+}
+#include <stdio.h>
+#include <string.h>
+int  main ()
+{
+    printf("\nTest de ft_substr :\n");
+	printf("njo : %s\n", ft_substr("bonjour", 2, 3));
+	printf("njour : %s\n", ft_substr("bonjour", 2, 5));
+	printf("njour : %s\n", ft_substr("bonjour", 2, 6));
+	printf("r : %s\n", ft_substr("bonjour", 6, 1));
+	printf("'' : %s\n",	ft_substr("bonjour", 6, 0));
+	char stest[100] = "test";
+	memset(stest + 6, 'a', 50); 
+	printf("'' : %s\n",	ft_substr(stest, 10, 1));  
+}ft_strjoin.c/   0           0     0     644     1758      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 17:05:24 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/09 15:13:14 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char *ft_strjoin(char const *s1, char const *s2)
+{
+    char *res;
+    int len;
+
+    len = ft_strlen(s1) + ft_strlen(s2) + 2;
+
+    if (!s1 && !s2)
+        return (NULL);
+    if (!s1)
+        return (ft_strdup(s2));
+    if (!s2)
+        return (ft_strdup(s1));
+    if (!(res = (char *)malloc((len)*sizeof(char))))
+        return (NULL);
+    ft_strcat(ft_strcpy(res, s1), s2);
+    return (res);
+}
+    #include <stdio.h>
+
+    int main (){
+    printf("\n\n--------STRJOIN------------");
+     printf("\n ft_strjoin : 'Hello World ', 'Salut ca va'\n");
+     char string[50] = "Hello World ";
+	char concat[50] = "Salut ca va";
+	 printf("%s\n", ft_strjoin(string, concat));
+    
+     printf("\n ft_strjoin : 'Hello', ' World, ca va?'\n");
+	char string2[50] = "Hello";
+	 char concat2[50] = " World, ca va?";
+	 printf("%s\n", ft_strjoin(string2, concat2));}ft_atoi.c/      0           0     0     644     1237      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 14:28:08 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/07 18:48:20 by rabouzia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_atoi(char *str)
+{
+	int	p;
+	int	n;
+
+	n = 0;
+	p = 0;
+	while ((*str >= 9 || *str <= 13) && *str == 32)
+		str++;
+	while (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			p++;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		n *= 10;
+		n += *str - '0';
+		str++;
+	}
+	if (!(p % 2 == 0))
+		return (-n);
+	return (n);
+}
+
