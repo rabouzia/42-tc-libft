@@ -6,13 +6,13 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:59:17 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/07 17:05:10 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:04:47 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int memcmp(const void *str1, const void *str2, size_t n)
+int ft_memcmp(const void *str1, const void *str2, size_t n)
 {
     int i;
     char *s1;
@@ -24,27 +24,4 @@ int memcmp(const void *str1, const void *str2, size_t n)
     while(s1[i] == s2[i] && n > 0)
         i++;
     return(s1[i] - s2[i]);
-}
- #include <stdio.h>
-#include <string.h>
-
-int main () {
-   char str1[15];
-   char str2[15];
-   int ret;
-
-   memcpy(str1, "abcdef", 6);
-   memcpy(str2, "ABCDEF", 6);
-
-   ret = memcmp(str1, str2, 5);
-
-   if(ret > 0) {
-      printf("str2 is less than str1");
-   } else if(ret < 0) {
-      printf("str1 is less than str2");
-   } else {
-      printf("str1 is equal to str2");
-   }
-   
-   return(0);
 }

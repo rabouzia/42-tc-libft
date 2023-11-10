@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:29:41 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/08 15:55:03 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:30:29 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int     ft_strlen(const char *str)
 {
     int i;
     i = 0;
-    while (str[i])
+    while (str[i] != '\0')
         i++;    
     return (i);
 }

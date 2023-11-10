@@ -6,27 +6,25 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:53 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/06 14:28:54 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:00:20 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memcpy(void *d, const void * s, size_t size)
+void *ft_memcpy(void *d, const void *s, size_t len)
 {
-    unsigned int i;
-    char                *dest;
-    const char           *src;
+    size_t i;
+    char *dest;
 
-    if (s == NULL || d == NULL)
-        return (NULL);
-    dest = d;
-    src = s;
+    dest = (char *) d;
     i = 0;
-    while (i < size)
+    while (i < len)
     {
-        dest[i] = src[i];
+        *(char *)dest = *(char *)s;
         i++;
+        dest++;
+        s++;
     }
     return (d);
 }

@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:29:31 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/09 19:00:59 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:36:38 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char    *ft_strdup(const char *src)
     int i;
     char *r;
 
-    r = (int *) malloc(sizeof(char) * (ft_strlen(src) + 1));
+    r = (char *) malloc(sizeof(char) * (ft_strlen(src) + 1));
     if (!r)
         return NULL;
     while(src[i])
