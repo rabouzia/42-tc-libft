@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 14:29:07 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/06 14:29:08 by rabouzia         ###   ########.fr       */
+/*   Created: 2023/11/13 21:41:37 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/13 21:46:08 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar(char c)
+char *strtrim(char const *s1, char const *set)
 {
-    write(1, &c, 1);
-}
+    char *res;
 
-void    ft_putnbr(int nb)
-{
-    long n;
-    n = nb;
+    res = malloc;
+
+    if (!res)
+        return (NULL);
     
-    if (n < 0)
-    {
-        n = -n;
-        ft_putchar('-');
-    }
-    
-    if (n > 9)
-    {
-        ft_putnbr(n / 10);
-        ft_putnbr(n % 10);
-    }
-    else
-        ft_putchar(n + '0');
 }

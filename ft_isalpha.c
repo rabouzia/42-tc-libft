@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:33 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/10 18:04:01 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:32:51 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int			ft_isalpha(int c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	return ((c >= 'A' && c <= 'Z')|| (c >= 'a' && c <= 'z'));
 }

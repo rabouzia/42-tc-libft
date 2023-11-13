@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:27:57 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/06 15:17:36 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:38:39 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,4 @@ char *ft_strchr(const char *str, int c)
         res++;
     }
     return res;
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main () 
-{
-   const char str[] = "https://www.tutorialspoint.com";
-   const char ch = '.';
-   char *ret;
-
-   ret = ft_strchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   
-   return(0);
 }

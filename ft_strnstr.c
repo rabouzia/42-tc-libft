@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:05:47 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/10 16:33:43 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:03:16 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char *ft_strnstr(const char *str, const char *to_find, size_t n)
     j = 0;
     if (to_find[j] == '\0')
         return ((char *)str);
-    while(str[i] && n > 0)
+    while (str[i] && n > 0)
     {
-        while(str[i + j] && to_find[j] == str[i + j])
+        while (str[i + j] && to_find[j] == str[i + j])
             j++;
         if (to_find[j] == '\0')
             return ((char *)str + i);
