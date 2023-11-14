@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:45:20 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/10 17:58:58 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:41:50 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t len)
 
 	x = ft_strlen(src);
 	i = 0;
-	if (len == 0)
-		return (len);
+	if (len < 1)
+		return (x);
 	if (len != 0)
 	{
-		while (src [i] != '\0' && i < len - 1)
+		while (src[i] != '\0' && i < len - 1)
 		{
 			dest[i] = src[i];
 			i++;
 		}
-		dest[i] = '\0';
 	}
+	dest[i] = '\0';
 	return (x);
 }

@@ -6,16 +6,16 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:47 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/06 14:28:48 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:40:31 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(unsigned char c)
+int	ft_isprint(unsigned char c)
 {
-    if (c >= 32  && c < 127)
-        return 1;
-    else
-        return 0;
+	if (c >= 32 && c < 127)
+		return (1);
+	else
+		return (0);
 }

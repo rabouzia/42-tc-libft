@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:08 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/13 20:05:14 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:39:05 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *s)
 {
-	int	p;
-	int	n;
-	char *str;	
+	int		p;
+	int		n;
+	char	*str;
 
 	str = (char *)s;
 	n = 0;

@@ -6,16 +6,15 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:29:37 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/13 16:34:36 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:42:25 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int    ft_tolower(char c)
+int	ft_tolower(char c)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return c;
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

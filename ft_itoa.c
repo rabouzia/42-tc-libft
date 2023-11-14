@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 17:05:24 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:47:40 by rabouzia         ###   ########.fr       */
+/*   Created: 2023/11/14 11:11:47 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/14 17:50:03 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_itoa(int nbr)
 {
-	char	*res;
-	size_t	len;
+	char	*str;
+	char	*t;
+	char	*u;
 
-	len = ft_strlen(s1) + ft_strlen(s2) + 2;
-	if (!s1 && !s2)
+	if (!(str = (char *)malloc(16)))
 		return (NULL);
-	if (!s1)
-		return (ft_strdup(s2));
-	if (!s2)
-		return (ft_strdup(s1));
-	res = (char *)malloc((len) * sizeof(char));
-	if (!res)
-		return (NULL);
-	ft_strlcpy(res, s1, len);
-	ft_strlcat(res, s2, len);
-	return (res);
+	t = str;
+	(nbr < 0 ? *t++ = "-" : 1);
+	if (nbr <= -10)
+	{
+		u = ft_itoa(-(nbr / 10));
+		while (*u)
+			*t++ = *u++;
+	}
+	*t = '0' - nbr % 10;
+	*(t + 1) = '\0';
+	return (str);
 }

@@ -6,25 +6,25 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:53 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/10 17:00:20 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:43:39 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *d, const void *s, size_t len)
+void	*ft_memcpy(void *d, const void *s, size_t len)
 {
-    size_t i;
-    char *dest;
+	size_t	i;
+	char	*dest;
 
-    dest = (char *) d;
-    i = 0;
-    while (i < len)
-    {
-        *(char *)dest = *(char *)s;
-        i++;
-        dest++;
-        s++;
-    }
-    return (d);
+	dest = (char *)d;
+	i = 0;
+	while (i < len)
+	{
+		*(char *)dest = *(char *)s;
+		i++;
+		dest++;
+		s++;
+	}
+	return (d);
 }
