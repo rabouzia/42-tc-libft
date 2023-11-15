@@ -6,36 +6,34 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:08 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:39:05 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/15 14:23:48 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+int	ft_atoi(const char *str)
 {
-	int		p;
-	int		n;
-	char	*str;
+	int	i;
+	int	p;
+	int	n;
 
-	str = (char *)s;
+	i = 0;
+	p = 1;
 	n = 0;
-	p = 0;
-	while ((*str >= 9 || *str <= 13) && *str == 32)
-		str++;
-	while (*str == '-' || *str == '+')
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (*str == '-')
-			p++;
-		str++;
+		if (str[i] == '-')
+			p *= -1;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (str[i] >= 48 && str[i] <= 57)
 	{
-		n *= 10;
-		n += *str - '0';
-		str++;
+		n = n * 10 + (str[i] - 48);
+		i++;
 	}
-	if (!(p % 2 == 0))
-		return (-n);
-	return (n);
+	return (n * p);
 }

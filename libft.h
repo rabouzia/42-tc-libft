@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:42:51 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:58:47 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 
 char				*ft_strtrim(char const *s1, char const *set);
 
+char				*ft_itoa(int n);
 typedef struct s_list
 {
 	void			*content;
