@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/15 16:58:47 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:08:49 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void				*ft_memchr(const void *str, int c, size_t n);
 
 int					ft_memcmp(const void *str1, const void *str2, size_t n);
 
-int					ft_strlen(const char *str);
+size_t					ft_strlen(const char *str);
 
 int					ft_isalpha(int c);
 

@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 15:35:47 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/17 16:57:22 by rabouzia         ###   ########.fr       */
+/*   Created: 2023/11/16 15:20:32 by rabouzia          #+#    #+#             */
+/*   Updated: 2023/11/17 15:47:48 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char *ft_strmapi(char const *s, char (*f) (unsigned int, char *))
 {
-	size_t	i;
-	size_t	j;
+    char *str;
 
-	j = 0;
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	if (size < ft_strlen(dest))
-		return (ft_strlen(src) + size);
-	i = ft_strlen(dest);
-	while (src[j] && i + j + 1 < size)
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (i + ft_strlen(src));
+    str = (char *) malloc(sizeof(char) * (ft_strlen(str) + 1));
+    if (!str)
+        return (NULL);
+        
 }

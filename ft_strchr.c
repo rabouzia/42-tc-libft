@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:27:57 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:43:10 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:09:25 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < ft_strlen(str) + 1)
