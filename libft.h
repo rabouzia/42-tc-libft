@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/17 16:08:49 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/17 18:23:11 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void				*ft_memchr(const void *str, int c, size_t n);
 
 int					ft_memcmp(const void *str1, const void *str2, size_t n);
 
-size_t					ft_strlen(const char *str);
+size_t				ft_strlen(const char *str);
 
 int					ft_isalpha(int c);
 
@@ -75,6 +75,19 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 
 char				*ft_itoa(int n);
+
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+void				ft_putchar_fd(char c, int fd);
+
+void				ft_putstr_fd(char *s, int fd);
+
+void				ft_putnbr_fd(int n, int fd);
+
+void				ft_putendl_fd(char *s, int fd);
+
 typedef struct s_list
 {
 	void			*content;
