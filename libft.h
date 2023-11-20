@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/17 18:23:11 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:43:35 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 
 char				*ft_itoa(int n);
+
+char				**ft_split(char const *s, char c);
 
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 

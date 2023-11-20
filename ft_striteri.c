@@ -6,12 +6,12 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:53:27 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/17 18:04:46 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:30:30 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unisgned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 }

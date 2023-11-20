@@ -6,26 +6,45 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 21:41:37 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:47:55 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:28:10 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_charset(char c, char const *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*res;
+	char	*str;
+	size_t	i;
+	size_t	debut;
+	size_t	fin;
 
-	res = malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (!res)
+	debut = 0;
+	while (s1[debut] && ft_charset(s1[debut], set))
+		debut++;
+	fin = ft_strlen(s1);
+	while (fin > debut && ft_charset(s1[fin - 1], set))
+		fin--;
+	str = (char *)malloc(sizeof(*s1) * (fin - debut + 1));
+	if (!str)
 		return (NULL);
-	while (*s1 != '\0')
-	{
-		if (s1 == set)
-			s1++;
-		else
-			res = (char *)s1;
-		s1++;
-	}
-	return (res);
+	i = 0;
+	while (debut < fin)
+		str[i++] = s1[debut++];
+	str[i] = 0;
+	return (str);
 }
