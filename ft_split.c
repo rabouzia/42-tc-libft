@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:42:30 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/20 14:24:33 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/21 13:35:21 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,5 @@ char	**ft_split(char const *s, char c)
 	}
 	str[i] = NULL;
 	return (str);
+	free(str);
 }

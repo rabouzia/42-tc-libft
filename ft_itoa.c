@@ -6,31 +6,25 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:11:47 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/16 15:19:42 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/21 12:59:24 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+static size_t	get_digits(long int n)
 {
-	char	*str;
-
-	str = (char *)malloc(sizeof(*str) * (size + 1));
-	if (!str)
-		return (NULL);
-	ft_bzero(str, size + 1);
-	return (str);
-}
-
-static int	count_size(int n)
-{
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (n < 0)
+	{
+		i++;
 		n *= -1;
-	while (n != 0)
+	}
+	while (n == 0)
+		return (1);
+	while (n > 0)
 	{
 		n /= 10;
 		i++;
@@ -38,31 +32,30 @@ static int	count_size(int n)
 	return (i);
 }
 
-char	*ft_itoa(int num)
+char	*ft_itoa(int nb)
 {
-	char		*dst;
-	int			count;
-	int			i;
 	long int	n;
+	int			len;
+	char		*str;
 
-	n = num;
-	count = count_size(n);
-	i = 0;
-	if (n < 0 || count == 0)
-		count++;
-	dst = ft_strnew(count);
-	if (!dst)
+	n = nb;
+	len = get_digits(n);
+	str = malloc(sizeof(char) * len + 1);
+	if (str == NULL)
 		return (NULL);
-	if (n < 0)
+	str[len] = '\0';
+	len = len - 1;
+	if (n == 0)
+		str[0] = '0';
+	else if (n < 0)
 	{
-		n *= -1;
-		dst[0] = '-';
+		str[0] = '-';
+		n = -n;
 	}
-	while (count > i)
+	while (n != 0)
 	{
-		count--;
-		dst[count] = (n % 10) + '0';
-		n /= 10;
+		str[len--] = n % 10 + '0';
+		n = n / 10;
 	}
-	return (dst);
+	return (str);
 }

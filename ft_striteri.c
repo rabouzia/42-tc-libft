@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:53:27 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/20 14:30:30 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/21 13:34:11 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,5 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
+
 }
