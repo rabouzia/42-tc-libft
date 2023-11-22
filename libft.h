@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/21 18:01:49 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/22 14:05:37 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,9 @@ typedef struct s_list
 t_list				*ft_lstnew(void *content);
 
 t_list				*ft_lstlast(t_list *lst);
+
+void				ft_lstadd_front(t_list **lst, t_list *new);
+
+int					ft_lstsize(t_list *lst);
 
 #endif

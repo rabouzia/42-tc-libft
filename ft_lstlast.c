@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 17:47:14 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/21 18:01:54 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/22 14:00:26 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+			return (0);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
