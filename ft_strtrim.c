@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 21:41:37 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/20 12:28:10 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:41:39 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	debut;
 	size_t	fin;
 
+	if (!s1 || !set)
+		return (NULL);
 	debut = 0;
 	while (s1[debut] && ft_charset(s1[debut], set))
 		debut++;

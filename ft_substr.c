@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:41:55 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:46:28 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:39:35 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	n;
 	char	*res;
 
-	n = ft_strlen(s);
 	if (!s)
 		return (NULL);
+	n = ft_strlen(s);
 	if (start > (unsigned int)n)
 		return (empty());
 	if (len > n - start)

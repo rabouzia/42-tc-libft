@@ -32,7 +32,7 @@ ${LIB}:	${OBJS}
 		ar -rsc ${LIB} ${OBJS}
 
 bonus:	${OBJSALL}
-		ar -rsc ${LIB} ${OBJSALL}
+		ar -rsc ${LIB} $^
 
 all: 	${LIB}
 
@@ -43,5 +43,9 @@ fclean:	clean;
 		rm -f ${LIB}
 
 re:	fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCSALL)
+	gcc -nostartfiles -shared -o libft.so $(OBJSALL)
 
 .PHONY: all clean fclean re bonus

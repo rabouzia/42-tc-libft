@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:30:29 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/24 10:57:59 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:00:31 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,17 @@ size_t				ft_strlen(const char *str);
 
 int					ft_isalpha(int c);
 
-int					ft_isdigit(char c);
+int					ft_isdigit(int c);
 
-int					ft_isalnum(char c);
+int					ft_isalnum(int c);
 
 int					ft_isascii(int c);
 
-int					ft_isprint(unsigned char c);
+int					ft_isprint(int c);
 
-int					ft_toupper(char c);
+int					ft_toupper(int c);
 
-int					ft_tolower(char c);
+int					ft_tolower(int c);
 
 char				*ft_strchr(const char *str, int c);
 
@@ -91,7 +91,7 @@ void				ft_putnbr_fd(int n, int fd);
 
 void				ft_putendl_fd(char *s, int fd);
 
-typedef struct s_list
+typedef struct t_list
 {
 	void			*content;
 	struct s_list	*next;

@@ -6,16 +6,15 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:42 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:40:27 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:25:06 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if ((c >= '0') && (c <= '9'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }

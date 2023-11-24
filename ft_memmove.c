@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:36:30 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:45:25 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:01:12 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*d;
 	size_t	i;
 
+	if (!dst && !src)
+		return (NULL);
 	s = (char *)src;
 	d = (char *)dst;
 	i = 0;

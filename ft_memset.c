@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:28:58 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:45:35 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/24 11:54:31 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	char	*start;
 
-	if (b == NULL)
-		return (NULL);
 	start = b;
 	while (len)
 	{

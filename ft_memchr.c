@@ -6,7 +6,7 @@
 /*   By: rabouzia <rabouzia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:22:58 by rabouzia          #+#    #+#             */
-/*   Updated: 2023/11/14 17:46:03 by rabouzia         ###   ########.fr       */
+/*   Updated: 2023/11/24 16:01:00 by rabouzia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 	i = 0;
 	res = (unsigned char *)str;
-	if (!str || n == 0)
-		return (NULL);
 	while (i < n)
 	{
 		if (*res == (unsigned char)c)
